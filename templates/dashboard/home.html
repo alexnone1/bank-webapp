@@ -1,0 +1,142 @@
+{% extends 'base.html' %}
+
+{% load static %}
+{% if messages %}
+  {% for message in messages %}
+    {{ message }}
+  {% endfor %}
+{% endif %}
+
+{% block content %}
+  <main class="hero-body">
+    <div class="hero-main">
+      <div class="hero-content">
+        <div class="hero-text">
+          <div class="hero-main">
+            <h1 class="text">Secure banking <br> for everyone <br> ANYTIME</h1>
+          </div>
+        </div>
+      </div>
+      <div class="hero-form">
+        <form action="." method="post">
+          {% csrf_token %}
+          <div>
+            <label for="username">Username</label><br>
+            <input type="text" placeholder="username" name="username">
+          </div>
+          <div>
+            <label for="password">Password</label><br>
+            <input type="password" placeholder="password" name="password"><br>
+          </div><br>
+          <input type="submit" value="Login">
+        </form>
+      </div>
+    </div>
+  </main>
+  <section class="play-logo">
+    <div class="play-store">
+      <img src="{% static '/images/icons/apple-app-store.svg' %}" alt="" srcset="">
+    </div>
+    <div class="apple-store">
+      <img src="{% static '/images/icons/google-play-badge.svg' %}" alt="" srcset="">
+    </div>
+  </section>
+  <section class="icon-box">
+    <h2 class="icon-head">
+      <b>Online and Mobile Banking Access Anywhere, Anytime.</b>
+    </h2>
+    <div class="icon-columns">
+      <div class="col col1">
+        <img src="{% static '/images/icons/password-lock.svg' %}" alt="password-lock">
+        <h3 class="col-text">Secure Login</h3>
+        <p>Advanved multi-factor security including facial facial recognision login</p>
+      </div>
+      <div class="col col2">
+        <img src="{% static '/images/icons/streamline-icon-shield.svg' %}" alt="icon-shield">
+        <h3 class="col-text">24/7 Access</h3>
+        <p>Secure access to your account using your phone and computer</p>
+      </div>
+      <div class="col col3">
+        <img src="{% static '/images/icons/streamline-icon-alarm.svg' %}" alt="icon-alarm">
+        <h3 class="col-text">Custom alert</h3>
+        <p>Set notifications for transactions, withdrawals, balance and more</p>
+      </div>
+      <div class="col col4">
+        <img src="{% static '/images/icons/smartphone.png' %}" alt="smartphone">
+        <h3 class="col-text">Banking-on-the-goal</h3>
+        <p>Transfer funds, check your balance, pay bills, view statements and more</p>
+      </div>
+    </div>
+  </section>
+  <section class="biometric 0ne">
+    <div class="bio-sect">
+      <img src="{% static '/images/icons/faceauth.png' %}" alt="" srcset="">
+    </div>
+    <div class="bio-sect img">
+      <h2>Biometric Recognision Login</h2>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore, ipsam consectetur adipisicing elit. 
+       Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quibusdam, odio!  Dolore, ipsam!</p>
+    </div>
+  </section>
+  <section class="biometric 2 thesecond">
+    <div class="bio-sect">
+      <h2>Biometric Recognision Login</h2>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore, ipsam consectetur adipisicing elit.
+        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quibusdam, odio! Dolore, ipsam!</p>
+    </div>
+    <div class="bio-sect">
+      <img src="{% static '/images/icons/deposite.png' %}" alt="" srcset="">
+    </div>
+  </section>
+  <section class="biometric 3 thesecond">
+    <div class="bio-sect img">
+      <img src="{% static '/images/icons/restrict.png' %}" alt="" srcset="">
+    </div>
+    <div class="bio-sect">
+      <h2>Biometric Recognision Login</h2>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore, ipsam consectetur adipisicing elit.
+        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quibusdam, odio! Dolore, ipsam!</p>
+    </div>
+  </section>
+  <section class="biometric 4">
+    <div class="bio-sect">
+      <h2>Biometric Recognision Login</h2>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore, ipsam consectetur adipisicing elit.
+        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quibusdam, odio! Dolore, ipsam!</p>
+    </div>
+    <div class="bio-sect img">
+      <img src="{% static '/images/icons/illustrationmoney-insight.png' %}" alt="" srcset="">
+    </div>
+  </section>
+  <section class="pay-way">
+    <div class="part1">
+      <div class="pay-content">
+        <h2>More Ways To Pay</h2>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.
+          Corporis deleniti veniam est ipsa enim odio cumque aspernatur ex, ullam libero!
+        </p>
+      </div>
+      <div class="pay-image">
+        <img src="{%static '/images/icons/logo-applepay.png' %}" alt="">
+        <img src="{%static '/images/icons/logo-gpay.png' %}" alt="">
+        <img src="{%static '/images/icons/logo-paypal.png' %}" alt="">
+        <img src="{%static '/images/icons/logo-venmo.png' %}" alt="">
+      </div>
+    </div>
+  </section>
+  <section>
+    <div class="part2">
+        <h2>ready to get started?</h2>
+        <a href="#" class="search-btn"> Become a Member</a>
+        <p>Already a member?<a href="" class="online-banking">register for online banking</a></p>
+      <div class="part2-logo">
+        <div class="play-store">
+          <img src="{% static '/images/icons/apple-app-store.svg' %}" alt="" srcset="">
+        </div>
+        <div class="apple-store">
+          <img src="{% static '/images/icons/google-play-badge.svg' %}" alt="" srcset="">
+        </div>
+      </div>
+    </div>
+  </section>
+{% endblock %}

@@ -1,0 +1,77 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <link href="{% static '/css/main.css' %}" rel="stylesheet">
+    <link href="{% static '/css/responsive.css' %}" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap" rel="stylesheet">
+    <style>
+      .auth{
+        display: flex;
+        justify-content: flex-end;
+        margin-right: 40px;
+        margin-top: 20px;
+      }
+
+      .username{
+        margin-right: 20px;
+      }
+    </style>
+  </head>
+  <body>
+    {% if user.is_authenticated %}
+      <div class="auth">
+        <div class="username">
+          <p>Welcome, {{username}}</p>
+        </div>
+        <div class="logout">
+          <a href="{% url 'logout_view' %}">Logout</a>
+        </div>    
+      </div>
+    {% else %}
+
+    <div class="navbar">
+      <div class="subnav">
+        <ul>
+          <li><a href="#"><i class="fa-sharp fa-solid fa-location-dot" style="color: #ffffff;"></i>Locations</a></li>
+          <li><a href="#"><i class="fa-solid fa-chart-simple" style="color: #ffffff;"></i>Rates</a></li>
+          <li><a href="#"><i class="fa-solid fa-phone" style="color: #fff;"></i>Contact Us</a></li>
+          <li><a href="#">Oppurtunities</a></li>
+          <li><a href="#"><i class="fa-solid fa-lock" style="color: #ffffff;"></i>Log in</a></li>
+        </ul>
+        <span><p>Routing #: 0000000000</p></span>
+      </div>
+      <div class="main-nav">
+        <div class="first-part">
+          <img src="{% static 'images/icons/logo.svg' %}" alt="The Logo">
+          <ul>
+            <li><a href="#">Why Ent?</a></li>
+            <li><a href="#">Products and Services</a></li>
+            <li><a href="#">Financial Education</a></li>
+          </ul>
+        </div>
+        <div class="second-part">
+          <form class="form-control" action="index.html" method="post">
+            <div class="search">
+              <input type="search" placeholder="Search Ent.net">
+            </div> 
+            <div>
+              <a href="#"  class="search-btn">Join Today</a>
+            </div>              
+          </form>         
+        </div>
+      </div>
+      <div class="red-part">
+        <p><a href="#">online & mobile</a></p>
+      </div>
+    </div>
+    {% endif %}
+    
+
+    <script src="https://kit.fontawesome.com/77d8f05410.js" crossorigin="anonymous"></script>
+  </body>
+</html>

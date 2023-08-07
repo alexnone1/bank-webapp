@@ -1,0 +1,158 @@
+{% include 'dashboard/navbar.html' %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+
+        :root{
+        --subcolor:#434655;
+        --thirdheader:#a91523;
+        --previous: #b83946;
+        --button-color:#fce900;
+        --action-color: #fff25e;
+        --icons-color:#b18c22;
+        --aboutcolor:#0c1a76;
+        --primaryColor:#fff;
+        --sect: #dbdbdb;
+        }
+        
+        body{
+            margin: 0;
+            padding: 0;
+        }
+
+        .account{
+            height: 40vh;
+        }
+
+        .account_body{
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            align-items: center;
+            height: 100%;
+        }
+
+        .account, .previous{
+            background-color: var(--thirdheader);
+            margin: 20px 20px;
+            box-sizing: border-box;
+            box-shadow: 1px 0.5px 10px inset rgb(255, 232, 101 .5);
+            padding: 30px 10px;
+            border-radius: 10px;
+            color: #fff;
+        }
+
+        .previous{
+            background-color: var(--previous);
+        }
+
+        .balance{
+            margin-left: -60px;
+            font-size: 30px;
+            line-height: 40px;
+        }
+
+        .account_actions{
+            margin-top: 20px;
+        }
+
+        .account_actions button{
+            background-color: var(--button-color);
+            padding: 10px 20px;
+            font-weight: bold;
+            font-size: 16px;
+            border: none;
+            border-radius: 20px;
+        }
+        .account_actions button:hover{
+            background-color: var(--action-color);
+            padding: 10px 20px;
+            font-weight: bold;
+            font-size: 16px;
+            border: none;
+            border-radius: 20px;
+        }
+
+/* //////////////////////// Media Query ///////////////////////////// */
+        @media (max-width: 768px){
+
+            .account_actions button{
+            background-color: var(--button-color);
+            padding: 10px 15px;
+            font-weight: bold;
+            font-size: 14px;
+            border: none;
+            border-radius: 20px;
+            margin-right: 5px;
+        }
+        .account_actions{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 20px;
+        }
+
+         .account{
+            height: 25vh;
+        }
+    }
+    </style>
+</head>
+<body>
+    {% block content %}
+    <div class="account">
+        <div class="account_body">
+            <div class="balance">
+                <h4>Account balance</h4>
+                <p>{{account_balance}}</p>
+            </div>
+            <div class="account_actions">
+                <button id="transfer btn">Transfer</button>
+                <button id="recieve btn">Recieve</button>
+                <button id="bill_payment btn">Bill Payment</button>
+            </div>
+        </div>
+    </div>
+    <h3>Transaction History</h3>
+    <div class="previous">
+        <h6>Previous Transactions</h6>
+        <div class="price">
+            <h6>Hotel</h6>
+            <p>$40,000</p>
+        </div>
+    </div>
+    <div class="previous">
+        <h6>Previous Transactions</h6>
+        <div class="price">
+            <h6>Hotel</h6>
+            <p>$40,000</p>
+        </div>
+    </div>
+    <div class="previous">
+        <h6>Previous Transactions</h6>
+        <div class="price">
+            <h6>Hotel</h6>
+            <p>$40,000</p>
+        </div>
+        div
+    </div>
+    <div class="previous">
+        <h6>Previous Transactions</h6>
+        <div class="price">
+            <h6>Hotel</h6>
+            <p>$40,000</p>
+        </div>
+    </div>
+    <div class="previous">
+        <h6>Previous Transactions</h6>
+        <div class="price">
+            <h6>Hotel</h6>
+            <p>$40,000</p>
+        </div>
+    </div>
+{% endblock %}
+</body>
+</html>

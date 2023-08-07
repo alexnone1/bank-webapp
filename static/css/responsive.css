@@ -1,0 +1,47 @@
+@media (min-width: 0px) and (max-width: 1000px){
+    body{
+        margin: 0;
+        padding: 0;
+    }
+
+    .navbar .subnav {
+        display: none;
+    }
+
+    .hero-content{
+        display: none;
+    }
+
+    .main-nav .first-part ul{
+        display: none;
+    }
+
+    .main-nav .second-part{
+        display: none;
+    }
+
+    .hero-body .hero-main {
+        flex-direction: column;
+    }
+
+    .icon-columns{
+        flex-direction: column;
+    }
+
+    .biometric{
+        flex-direction: column;
+    }
+
+    .hero-body .one{
+        margin: 0;
+    }
+    
+    .hero-body .pay-way{
+        margin: 0;
+    }
+
+    .hero-body .hero-form{
+        padding: 40px;
+        border-radius: 20px;
+    }
+}
