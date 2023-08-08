@@ -11,25 +11,15 @@
   <main class="hero-body">
     <div class="hero-main">
       <div class="hero-content">
+        <div class="hero-image">
+          <div class="hero-img">
+          </div>
+        </div>
         <div class="hero-text">
           <div class="hero-main">
             <h1 class="text">Secure banking <br> for everyone <br> ANYTIME</h1>
           </div>
         </div>
-      </div>
-      <div class="hero-form">
-        <form action="." method="post">
-          {% csrf_token %}
-          <div>
-            <label for="username">Username</label><br>
-            <input type="text" placeholder="username" name="username">
-          </div>
-          <div>
-            <label for="password">Password</label><br>
-            <input type="password" placeholder="password" name="password"><br>
-          </div><br>
-          <input type="submit" value="Login">
-        </form>
       </div>
     </div>
   </main>
@@ -43,13 +33,13 @@
   </section>
   <section class="icon-box">
     <h2 class="icon-head">
-      <b>Online and Mobile Banking Access Anywhere, Anytime.</b>
+      <b style="text-align: justify;">Online and Mobile Banking Access Anywhere, Anytime.</b>
     </h2>
     <div class="icon-columns">
       <div class="col col1">
         <img src="{% static '/images/icons/password-lock.svg' %}" alt="password-lock">
         <h3 class="col-text">Secure Login</h3>
-        <p>Advanved multi-factor security including facial facial recognision login</p>
+        <p style="text-align: justify;">Advanved multi-factor security including facial facial recognision login</p>
       </div>
       <div class="col col2">
         <img src="{% static '/images/icons/streamline-icon-shield.svg' %}" alt="icon-shield">
@@ -68,40 +58,40 @@
       </div>
     </div>
   </section>
-  <section class="biometric 0ne">
+  <section class="biometric 0ne" style="margin-top: 10px; margin-bottom: 30px;">
     <div class="bio-sect">
       <img src="{% static '/images/icons/faceauth.png' %}" alt="" srcset="">
     </div>
     <div class="bio-sect img">
-      <h2>Biometric Recognision Login</h2>
-      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore, ipsam consectetur adipisicing elit. 
+      <h2 style="text-align: center;">Biometric Recognision Login</h2>
+      <p style="text-align: center;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore, ipsam consectetur adipisicing elit. 
        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quibusdam, odio!  Dolore, ipsam!</p>
     </div>
   </section>
-  <section class="biometric 2 thesecond">
+  <section class="biometric 2 thesecond" style="flex-direction: column-reverse; margin-top: 30px; margin-bottom: 30px;">
     <div class="bio-sect">
-      <h2>Biometric Recognision Login</h2>
-      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore, ipsam consectetur adipisicing elit.
+      <h2 style="text-align: center;">Biometric Recognision Login</h2>
+      <p style="text-align: center;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore, ipsam consectetur adipisicing elit.
         Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quibusdam, odio! Dolore, ipsam!</p>
     </div>
     <div class="bio-sect">
       <img src="{% static '/images/icons/deposite.png' %}" alt="" srcset="">
     </div>
   </section>
-  <section class="biometric 3 thesecond">
+  <section class="biometric 3 thesecond" style="margin: 10px 0">
     <div class="bio-sect img">
       <img src="{% static '/images/icons/restrict.png' %}" alt="" srcset="">
     </div>
     <div class="bio-sect">
-      <h2>Biometric Recognision Login</h2>
-      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore, ipsam consectetur adipisicing elit.
+      <h2 style="text-align: center;">Biometric Recognision Login</h2>
+      <p style="text-align: center;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore, ipsam consectetur adipisicing elit.
         Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quibusdam, odio! Dolore, ipsam!</p>
     </div>
   </section>
-  <section class="biometric 4">
+  <section class="biometric 4" style="flex-direction: column-reverse; margin-top: 10px; margin-bottom: 10px;">
     <div class="bio-sect">
-      <h2>Biometric Recognision Login</h2>
-      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore, ipsam consectetur adipisicing elit.
+      <h2 style="text-align: center;">Biometric Recognision Login</h2>
+      <p style="text-align: center;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore, ipsam consectetur adipisicing elit.
         Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quibusdam, odio! Dolore, ipsam!</p>
     </div>
     <div class="bio-sect img">
@@ -111,8 +101,8 @@
   <section class="pay-way">
     <div class="part1">
       <div class="pay-content">
-        <h2>More Ways To Pay</h2>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.
+        <h2 style="text-align: center;">More Ways To Pay</h2>
+        <p style="text-align: center;">Lorem ipsum dolor sit amet consectetur adipisicing elit.
           Corporis deleniti veniam est ipsa enim odio cumque aspernatur ex, ullam libero!
         </p>
       </div>

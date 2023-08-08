@@ -128,12 +128,8 @@ body{
 }
 
 .hero-body{
-    background: url('../images/hero-black.png');
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
-    height: 100vh;
-    position: relative;
+  background-color: crimson;
+  height: 80vh;
 }
 
 .hero-main{
@@ -348,13 +344,7 @@ p .online-banking{
 
 
 @media (max-width: 768px){
-  .hero-form form {
-      display: flex;
-      flex-direction: column;
-      color: #fff;
-      height: 200%;
-      width: 200%;
-    }
+
   
     form input {
       padding: 15px 10px;
@@ -365,6 +355,11 @@ p .online-banking{
       border: none;
       font-size: 16px;
       font: 16px;
+    }
+
+    .hero-form{
+      height: 800px;
+      width: 100vw;
     }
   
     .hero-form input[type="submit"] {

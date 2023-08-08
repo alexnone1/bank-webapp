@@ -20,6 +20,18 @@
       .username{
         margin-right: 20px;
       }
+
+      .logo{
+        font-size: 40px;
+        margin-top: 20px;
+        font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+        font-weight: bold;
+        cursor: pointer;
+      }
+
+      .logo .color{
+        color: #a91523;
+      }
     </style>
   </head>
   <body>
@@ -47,7 +59,7 @@
       </div>
       <div class="main-nav">
         <div class="first-part">
-          <img src="{% static 'images/icons/logo.svg' %}" alt="The Logo">
+          <span class="logo">Funding <span class="color">Equity</span></span>
           <ul>
             <li><a href="#">Why Ent?</a></li>
             <li><a href="#">Products and Services</a></li>
