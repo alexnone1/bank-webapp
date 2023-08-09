@@ -19,13 +19,8 @@ def register_view(request):
 
 
 def home_view(request):
-    username = 'micheal'
 
-    context = {
-        "username": username
-    }
-
-    return render(request, "dashboard/home.html", context)
+    return render(request, "dashboard/home.html")
 
 
 def login_view(request):
@@ -51,7 +46,7 @@ def logout_view(request):
 
 def dashboard_view(request):
     username = "Donna Smith"
-    account_balance = "$71,356,200.43"
+    account_balance = "$1,254,300.43"
 
     context = {
         "username": username,
