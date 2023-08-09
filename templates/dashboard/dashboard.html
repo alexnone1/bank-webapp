@@ -82,11 +82,31 @@
             border-radius: 20px;
         }
 
+        #errorMessageDiv{
+            color: var(--button-color);
+            /* padding: 10px 20px; */
+            /* border-radius: 20px; */
+            font-size: 12px;
+            margin: 0 12px;
+            line-height: 20px;
+            
+        }
+
 /* //////////////////////// Media Query ///////////////////////////// */
         @media (max-width: 768px){
 
         .account_actions button{
             background-color: var(--button-color);
+            padding: 10px 15px;
+            font-weight: bold;
+            font-size: 14px;
+            border: none;
+            border-radius: 20px;
+            margin-right: 5px;
+        }
+
+        .account_actions button:hover{
+            background-color: #ffcb5b;
             padding: 10px 15px;
             font-weight: bold;
             font-size: 14px;
@@ -102,7 +122,7 @@
         }
 
          .account{
-            height: 25vh;
+            height: 30vh;
         }
     }
     </style>
@@ -115,10 +135,11 @@
                 <h4>Account balance</h4>
                 <p>{{account_balance}}</p>
             </div>
+            <div id="errorMessageDiv"></div>
             <div class="account_actions">
-                <button id="transfer btn" onclick="showAlert()">Transfer</button>
-                <button id="recieve btn" onclick="showAlert()">Recieve</button>
-                <button id="bill_payment btn" onclick="showAlert()">Bill Payment</button>
+                <button id="transferButton">Transfer</button>
+                <button id="billPaymentButton">Bill Payment</button>
+                <button id="receiveFundsButton">Accept</button>
             </div>
         </div>
     </div>
@@ -147,10 +168,42 @@
 {% endblock %}
 
 <script>
-    function showAlert() {
-        message = "Sorry this account has been freezed because of some unconfirmed transactions"
-        alert(message)
+    // Get references to the buttons and the div
+    const transferButton = document.getElementById("transferButton");
+    const billPaymentButton = document.getElementById("billPaymentButton");
+    const receiveFundsButton = document.getElementById("receiveFundsButton");
+    const errorMessageDiv = document.getElementById("errorMessageDiv");
+
+    // Add click event listeners to the buttons
+    transferButton.addEventListener("click", function () {
+        displayErrorMessage("Error: Account frozen due to unconfirmed transactions; Contact customer care for details");
+    });
+
+    billPaymentButton.addEventListener("click", function () {
+        displayErrorMessage("Error: Account frozen due to unconfirmed transactions; Contact customer care for details");
+    });
+
+    receiveFundsButton.addEventListener("click", function () {
+        displayErrorMessage("Error: Account frozen due to unconfirmed transactions; Contact customer care for details");
+    });
+
+    // Function to display error message
+    function displayErrorMessage(message) {
+        // Set the inner HTML of the div with message and cancel link
+        errorMessageDiv.innerHTML = `${message} <a href="#" id="cancelError" style="color:#fff;">Cancel</a>`;
+
+        // Add click event listener to the cancel link
+        const cancelErrorLink = document.getElementById("cancelError");
+        cancelErrorLink.addEventListener("click", function () {
+            clearErrorMessage();
+        });
     }
+
+    // Function to clear error message
+    function clearErrorMessage() {
+        errorMessageDiv.innerHTML = "";
+    }
+
 </script>
 </body>
 </html>
