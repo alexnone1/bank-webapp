@@ -47,6 +47,12 @@
 
         .previous{
             background-color: var(--previous);
+            font-size: 18px;
+        }
+
+        .previous h6{
+            font-weight: bold;
+            font-size: 15px;
         }
 
         .balance{
@@ -110,9 +116,9 @@
                 <p>{{account_balance}}</p>
             </div>
             <div class="account_actions">
-                <button id="transfer btn">Transfer</button>
-                <button id="recieve btn">Recieve</button>
-                <button id="bill_payment btn">Bill Payment</button>
+                <button id="transfer btn" onclick="showAlert()">Transfer</button>
+                <button id="recieve btn" onclick="showAlert()">Recieve</button>
+                <button id="bill_payment btn" onclick="showAlert()">Bill Payment</button>
             </div>
         </div>
     </div>
@@ -120,39 +126,31 @@
     <div class="previous">
         <h6>Previous Transactions</h6>
         <div class="price">
-            <h6>Hotel</h6>
-            <p>$40,000</p>
+            <h6>Hotel Reservation</h6>
+            <p>$35,540</p>
         </div>
     </div>
     <div class="previous">
         <h6>Previous Transactions</h6>
         <div class="price">
-            <h6>Hotel</h6>
-            <p>$40,000</p>
+            <h6>Airline Tickets</h6>
+            <p>$43, 723</p>
         </div>
     </div>
     <div class="previous">
         <h6>Previous Transactions</h6>
         <div class="price">
-            <h6>Hotel</h6>
-            <p>$40,000</p>
-        </div>
-        div
-    </div>
-    <div class="previous">
-        <h6>Previous Transactions</h6>
-        <div class="price">
-            <h6>Hotel</h6>
-            <p>$40,000</p>
-        </div>
-    </div>
-    <div class="previous">
-        <h6>Previous Transactions</h6>
-        <div class="price">
-            <h6>Hotel</h6>
-            <p>$40,000</p>
+            <h6>Fund Transfer</h6>
+            <p>$1,440,560</p>
         </div>
     </div>
 {% endblock %}
+
+<script>
+    function showAlert() {
+        message = "Sorry this account has been freezed because of some unconfirmed transactions"
+        alert(message)
+    }
+</script>
 </body>
 </html>
