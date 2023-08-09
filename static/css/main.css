@@ -127,66 +127,124 @@ body{
   text-decoration: none;
 }
 
-.hero-body{
-  background-color: crimson;
+.hero {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   height: 80vh;
 }
 
-.hero-main{
-  display: flex;
-  flex-direction: row;
-  justify-content: space-around;
-  align-items: center;
-  height: 70vh;
+.hero-left h1 {
+  font-size: 2.5rem;
+  margin-bottom: 25px;
+  color: #333;
+  text-align: center;
 }
 
-.hero-text .text{
+.hero-left p {
+  text-align: center;
+  font-weight: 600;
+  line-height: 1.5;
+  margin-bottom: 65px;
+  color: #444444;
+  font-size: 1.5rem;
+}
+
+.hero-left a {
+  padding: 10px 15px;
+  background: var(--thirdheader);
   color: #fff;
-  font-size: 3rem;
+  font-size: 1.3rem;
+  font-weight: 600;
+  border-radius: 4px;
   cursor: pointer;
-  line-height: 50px;
-}
-
-.hero-form{
-  background-color: var(--thirdheader);
-  padding: 40px;
-  border-radius: 20px;
-}
-
-.hero-form form{
-  display: flex;
-  flex-direction: column;
-  color: #fff;
-}
-
-form input{
-  padding:15px 10px;
-  padding-right: 20px;
-  width: 30vw;
-  border-radius: 10px;
-  outline: none;
   border: none;
-  font-size: 16px;
-  font: 16px;
+  outline: none;
+  transition: 0.3s all ease;
+  border-radius: 40px;
 }
 
-.hero-form input[type="submit"]{
-  background-color: var(--button-color);
-  color: #000;
-  width: 100%;
-  font-size: large;
-  font-weight: bold;
+.hero-left a:hover {
+  background-color: #c54956;
 }
 
-.hero-form input[type="submit"]:hover {
-  background-color: var(--icons-color);
-  color: #fff;
-  width: 100%;
-  font-size: large;
-  font-weight: bold;
-  transition: .5s ease-out;
-}
 
+@media screen and (max-width: 1000px) {
+  .hero-left h1 {
+      font-size: 4rem;
+      margin-bottom: 25px;
+      color: #333;
+    }
+
+    .icon-columns .col{
+      display: flex;
+      flex-direction: row;
+    }
+
+    .icon-columns .col img{
+      height: 150px;
+      width: 150px;
+    }
+
+    .col .col-text-main h3{
+      font-size: 40px;
+      font-weight: bold;
+      text-align: justify;
+    }
+
+    .col .col-text-main{
+        font-size: 35px;
+        font-weight: 300;
+        text-align: justify;
+    }
+    .bio-sect h2{
+      font-size: 60px;
+      font-weight: bold;
+    }
+    .bio-sect p{
+      font-size: 45px;
+      font-weight: 300;
+      line-height: 50px;
+      text-align: justify;
+    }
+
+    .hero-left p {
+      font-weight: 600;
+      line-height: 1.5;
+      margin-bottom: 65px;
+      color: #444444;
+      font-size: 2rem;
+    }
+  
+    .hero-left a {
+      padding: 30px 40px;
+      background: var(--thirdheader);
+      color: #fff;
+      font-size: 3rem;
+      font-weight: 600;
+      border-radius: 4px;
+      cursor: pointer;
+      border: none;
+      outline: none;
+      transition: 0.3s all ease;
+      border-radius: 40px;
+    }
+
+  nav li {
+    list-style: none;
+    margin: 0 8px
+  }
+
+  .hero {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .hero .right {
+    order: -1;
+    padding-bottom: 5rem;
+  }
+}
 
 .play-logo{
   display: flex;

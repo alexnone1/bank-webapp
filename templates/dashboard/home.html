@@ -9,19 +9,19 @@
 
 {% block content %}
   <main class="hero-body">
-    <div class="hero-main">
-      <div class="hero-content">
-        <div class="hero-image">
-          <div class="hero-img">
-          </div>
+      <header class="container">
+        <div class="hero">
+          <section class="hero-left">
+            <h1>All your files are in one secure location, accessible anywhere.</h1>
+            <p>
+              Lorem ipsum is a placeholder text commonly used to demonstrate the visual form of a document or a typeface
+              without relying on meaningful content.
+            </p>
+      
+            <a href="{% url 'login_view' %}">Sign In</a>
+          </section>
         </div>
-        <div class="hero-text">
-          <div class="hero-main">
-            <h1 class="text">Secure banking <br> for everyone <br> ANYTIME</h1>
-          </div>
-        </div>
-      </div>
-    </div>
+      </header>
   </main>
   <section class="play-logo">
     <div class="play-store">
@@ -38,23 +38,31 @@
     <div class="icon-columns">
       <div class="col col1">
         <img src="{% static '/images/icons/password-lock.svg' %}" alt="password-lock">
-        <h3 class="col-text">Secure Login</h3>
-        <p style="text-align: justify;">Advanved multi-factor security including facial facial recognision login</p>
+        <div class="col-text-main">
+          <h3 class="col-text">Secure Login</h3>
+          <p style="text-align: justify;">Advanved multi-factor security including facial facial recognision login</p>
+        </div>
       </div>
       <div class="col col2">
         <img src="{% static '/images/icons/streamline-icon-shield.svg' %}" alt="icon-shield">
-        <h3 class="col-text">24/7 Access</h3>
-        <p>Secure access to your account using your phone and computer</p>
+        <div class="col-text-main">
+          <h3 class="col-text">24/7 Access</h3>
+          <p>Secure access to your account on your mobile phone and computer</p>
+        </div>
       </div>
       <div class="col col3">
         <img src="{% static '/images/icons/streamline-icon-alarm.svg' %}" alt="icon-alarm">
-        <h3 class="col-text">Custom alert</h3>
-        <p>Set notifications for transactions, withdrawals, balance and more</p>
+        <div class="col-text-main">
+          <h3 class="col-text">Custom alert</h3>
+          <p>Set notifications for transactions, withdrawals, balance and more</p>
+        </div>
       </div>
       <div class="col col4">
         <img src="{% static '/images/icons/smartphone.png' %}" alt="smartphone">
-        <h3 class="col-text">Banking-on-the-goal</h3>
-        <p>Transfer funds, check your balance, pay bills, view statements and more</p>
+        <div class="col-text-main">
+          <h3 class="col-text">Banking-on-the-goal</h3>
+          <p>Transfer funds, check your balance, pay bills, view statements and more</p>
+        </div>
       </div>
     </div>
   </section>
@@ -64,15 +72,15 @@
     </div>
     <div class="bio-sect img">
       <h2 style="text-align: center;">Biometric Recognision Login</h2>
-      <p style="text-align: center;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore, ipsam consectetur adipisicing elit. 
-       Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quibusdam, odio!  Dolore, ipsam!</p>
+      <p style="text-align: center;">Advanced security features to keep your account safe including encryption, secondary authentication, facial recognition
+      login and fingerprint login.</p>
     </div>
   </section>
   <section class="biometric 2 thesecond" style="flex-direction: column-reverse; margin-top: 30px; margin-bottom: 30px;">
     <div class="bio-sect">
-      <h2 style="text-align: center;">Biometric Recognision Login</h2>
-      <p style="text-align: center;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore, ipsam consectetur adipisicing elit.
-        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quibusdam, odio! Dolore, ipsam!</p>
+      <h2 style="text-align: center;">Mobile Check Deposit</h2>
+      <p style="text-align: center;">Save time (and gas) with mobile check deposit. Take a picture to deposit a check into your account right from your
+      mobile device.</p>
     </div>
     <div class="bio-sect">
       <img src="{% static '/images/icons/deposite.png' %}" alt="" srcset="">
@@ -83,16 +91,16 @@
       <img src="{% static '/images/icons/restrict.png' %}" alt="" srcset="">
     </div>
     <div class="bio-sect">
-      <h2 style="text-align: center;">Biometric Recognision Login</h2>
-      <p style="text-align: center;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore, ipsam consectetur adipisicing elit.
-        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quibusdam, odio! Dolore, ipsam!</p>
+      <h2 style="text-align: center;">Secure Debit Card Controls</h2>
+      <p style="text-align: center;">Lost your card? Quickly freeze all use right from your phone. Plus, easily restrict transactions, set spending limits
+      and update your PIN — all from your phone.</p>
     </div>
   </section>
   <section class="biometric 4" style="flex-direction: column-reverse; margin-top: 10px; margin-bottom: 10px;">
     <div class="bio-sect">
-      <h2 style="text-align: center;">Biometric Recognision Login</h2>
-      <p style="text-align: center;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore, ipsam consectetur adipisicing elit.
-        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quibusdam, odio! Dolore, ipsam!</p>
+      <h2 style="text-align: center;">Money Insight & Planning</h2>
+      <p style="text-align: center;">With Ent’s Money Insight, view your accounts from other financial institutions, track spending, create budgets and set
+      goals.</p>
     </div>
     <div class="bio-sect img">
       <img src="{% static '/images/icons/illustrationmoney-insight.png' %}" alt="" srcset="">
