@@ -45,8 +45,8 @@ def logout_view(request):
 
 
 def dashboard_view(request):
-    username = "Donna Smith"
-    account_balance = "$1,254,300.43"
+    username = "James Smith"
+    account_balance = "$69,254,300.43"
 
     context = {
         "username": username,

@@ -101,6 +101,10 @@ body{
       color: #333;
     }
 
+        .main-nav ul {
+          display: none;
+        
+        }
     .icon-columns .col{
       display: flex;
       flex-direction: row;
